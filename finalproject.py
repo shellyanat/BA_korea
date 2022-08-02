@@ -5,7 +5,7 @@ import seaborn as sns
 import numpy as np
 from PIL import Image
 from numerize import numerize
-import plotly
+from chart_studio import plotly
 import plotly.plotly as py
 import plotly.graph_objects as go
 import plotly.express as px
