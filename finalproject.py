@@ -13,7 +13,6 @@ import plotly.express as px
 st.set_page_config(layout="wide")
 st.title("Artis Korea sebagai Duta Merek Brand Lokal")
 
-st.write("Melihat wajah korea dalam kegiatan promosi brand lokal bukan lagi suatu hal yang asing, mulai dari iklan di televisi, di sosial media, hingga baliho di pinggir jalan dapat mudah kita temukan artis korea")
 
 #data
 df = pd.read_excel("ba_artis_korea.xlsx")
