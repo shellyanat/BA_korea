@@ -123,4 +123,4 @@ for b,p in zip(list_BA, pal):
                              fill=None))   #tozeroy 
 
 
-fig_hist.show()
+st.plotly_chart(fig_hist, use_container_width=True)
