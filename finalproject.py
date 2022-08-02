@@ -6,6 +6,7 @@ import numpy as np
 from PIL import Image
 from numerize import numerize
 import plotly
+import plotly.plotly as py
 import plotly.graph_objects as go
 import plotly.express as px
 
@@ -13,7 +14,7 @@ import plotly.express as px
 st.set_page_config(layout="wide")
 st.title("Artis Korea sebagai Duta Merek Brand Lokal")
 
-plotly.sign_in(username='shellyanat', api_key='CHyax83b2yesSo6k1bUL')
+py.sign_in(username='shellyanat', api_key='CHyax83b2yesSo6k1bUL')
 
 
 #data
