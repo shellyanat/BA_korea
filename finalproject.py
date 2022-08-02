@@ -13,6 +13,8 @@ import plotly.express as px
 st.set_page_config(layout="wide")
 st.title("Artis Korea sebagai Duta Merek Brand Lokal")
 
+py.sign_in(username='shellyanat', api_key='CHyax83b2yesSo6k1bUL')
+
 
 #data
 df = pd.read_excel("ba_artis_korea.xlsx")
