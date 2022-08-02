@@ -81,11 +81,11 @@ ax3.axis('equal')
 with st.container():
     chart1,chart2 = st.columns(2)
     with chart1:
-        st.pyplot(fig_pie1)
+        st.pyplot(fig_pie1, use_container_width=True)
     with chart2:
-        st.pyplot(fig_pie2)
+        st.pyplot(fig_pie2, use_container_width=True)
 
-st.pyplot(fig_bar)
+st.pyplot(fig_bar, use_container_width=True)
 
 
 
