@@ -6,3 +6,4 @@ Pillow==9.2.0
 numerize==0.12
 seaborn==0.11.2
 openpyxl==3.0.10
+chart-studio==1.1.0
