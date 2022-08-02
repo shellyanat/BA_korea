@@ -121,4 +121,4 @@ for b,p in zip(list_BA, pal):
                              fill=None))   #tozeroy 
 
 
-#plotly.offline.plot(fig_hist)
+fig_hist.show()
