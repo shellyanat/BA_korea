@@ -280,7 +280,7 @@ for b,p in zip(list_BA, pal):
                              fill=None))   
 fig_hist.update_layout(title="Grafik Brand di Google Trend Sebelum dan Sesudah Menggunakan BA Artis Korea")
 
-st.plotly_chart(fig_hist)
+st.plotly_chart(fig_hist,use_container_width=True)
 
 #histogram end
 
@@ -387,7 +387,7 @@ fig = go.Figure(data=go.Heatmap(
                    hoverongaps = False))
 fig.update_layout(title="Peta Nilai Korelasi Faktor-Faktor yang Mempengaruhi Pertumbuhan Nilai pada Google Trend")
 
-st.plotly_chart(fig)
+st.plotly_chart(fig, use_container_width=True)
 
 #show corr
 #plotly.offline.plot(fig)
