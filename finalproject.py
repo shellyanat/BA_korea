@@ -42,7 +42,7 @@ div[data-testid="metric-container"] {
 div[data-testid="metric-container"] > label[data-testid="stMetricLabel"] > div {
    overflow-wrap: break-word;
    white-space: break-spaces;
-   color: skyBlue;
+   color: midnightBlue;
 }
 </style>
 """
