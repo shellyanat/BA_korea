@@ -42,12 +42,22 @@ div[data-testid="metric-container"] {
 div[data-testid="metric-container"] > label[data-testid="stMetricLabel"] > div {
    overflow-wrap: break-word;
    white-space: break-spaces;
-   color: blue;
+   color: brown;
 }
 </style>
 """
 , unsafe_allow_html=True)
 
+st.markdown(
+    """
+<style>
+span[data-baseweb="tag"] {
+  background-color: blue !important;
+}
+</style>
+""",
+    unsafe_allow_html=True,
+)
 
 #data
 df = pd.read_excel("ba_artis_korea.xlsx")
