@@ -42,7 +42,7 @@ div[data-testid="metric-container"] {
 div[data-testid="metric-container"] > label[data-testid="stMetricLabel"] > div {
    overflow-wrap: break-word;
    white-space: break-spaces;
-   color: blue;
+   color: skyBlue;
 }
 </style>
 """
@@ -52,7 +52,7 @@ st.markdown(
     """
 <style>
 span[data-baseweb="tag"] {
-  background-color: lightBlue !important;
+  background-color: navy !important;
 }
 </style>
 """,
