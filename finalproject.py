@@ -94,7 +94,7 @@ with st.expander("Sedikit Kilas Balik Hallyu Wave di Indonesia"):
     #kpop popularity graph
     labels = 'Very Popular', 'Popular', 'Popular for a few people', 'Not really'
     sizes = np.array([295, 149, 47,9])
-    colors = list(sns.color_palette(palette='deep', n_colors=len(sizes))
+    colors = list(sns.color_palette(palette='deep', n_colors=len(sizes)))
     fig_pop, ax1 = plt.subplots()
     ax1.pie(sizes, labels=labels,autopct='%.1f%%', startangle=90,colors=colors)
     ax1.set_title('K-pop Popularity in Indonesia (2018)', fontsize=18)
