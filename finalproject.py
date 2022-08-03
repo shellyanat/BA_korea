@@ -80,7 +80,7 @@ with st.container():
     with prof:
         st.write("Shellya Nur Atqiya ")
         st.write("Final Year Mathematics Student at Universitas Pendidikan Indonesia")
-        st.write ("shellyanra08@gmail.com")
+        st.write ("shellyaaa29@gmail.com | shellyanra08@gmail.com")
     with port:
         st.write("https://www.linkedin.com/in/shellyanra/")
         st.write("https://shellyanat.github.io/")
