@@ -34,7 +34,7 @@ div[data-testid="metric-container"] {
    border: 1px solid rgba(28, 131, 225, 0.1);
    padding: 2% 2% 2% 8%;
    border-radius: 5px;
-   color: rgb(240,248,255);
+   color: rgb(72,61,139);
    overflow-wrap: break-word;
 }
 
@@ -42,7 +42,7 @@ div[data-testid="metric-container"] {
 div[data-testid="metric-container"] > label[data-testid="stMetricLabel"] > div {
    overflow-wrap: break-word;
    white-space: break-spaces;
-   color: skyBlue;
+   color: darkSlateBlue;
 }
 </style>
 """
