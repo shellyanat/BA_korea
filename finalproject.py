@@ -42,7 +42,7 @@ div[data-testid="metric-container"] {
 div[data-testid="metric-container"] > label[data-testid="stMetricLabel"] > div {
    overflow-wrap: break-word;
    white-space: break-spaces;
-   color: red;
+   color: blue;
 }
 </style>
 """
@@ -94,7 +94,7 @@ with st.expander("Sedikit Kilas Balik Hallyu Wave di Indonesia"):
     #kpop popularity graph
     labels = 'Very Popular', 'Popular', 'Popular for a few people', 'Not really'
     sizes = np.array([295, 149, 47,9])
-    colors = ['yellowgreen', 'gold', 'lightskyblue','pink']
+    colors = list(sns.color_palette(palette='deep', n_colors=len(sizes))
     fig_pop, ax1 = plt.subplots()
     ax1.pie(sizes, labels=labels,autopct='%.1f%%', startangle=90,colors=colors)
     ax1.set_title('K-pop Popularity in Indonesia (2018)', fontsize=18)
@@ -259,7 +259,7 @@ with pil3:
 #graphic
 list_BA = data.brand_artis.values.tolist()
 list_BA = sorted(list(set(list_BA)))
-pal = list(sns.color_palette(palette='pastel', n_colors=len(list_BA)).as_hex())
+pal = list(sns.color_palette(palette='deep', n_colors=len(list_BA)).as_hex())
 
 fig_hist = go.Figure()
 for b,p in zip(list_BA, pal):
