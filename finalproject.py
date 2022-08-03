@@ -52,7 +52,7 @@ st.markdown(
     """
 <style>
 span[data-baseweb="tag"] {
-  background-color: midnightBlue !important;
+  background-color: darkSlateBlue !important;
 }
 </style>
 """,
