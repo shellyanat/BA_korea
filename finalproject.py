@@ -405,11 +405,15 @@ st.markdown("---")
 #conclusion
 st.subheader("Kesimpulan")
 st.markdown('<div style="text-align: justify;">Hasil dari analisis data dapat menjadi pertimbangan untuk perusahaan yang ingin menggunakan artis korea sebagai brand ambassadornya. Hal yang perlu dilakukan antara lain:</div>', unsafe_allow_html=True)
+st.write("")
 st.markdown('<div style="text-align: justify;">1. Menerapkan strategi marketing yang sekiranya berhasil dilakukan oleh brand-brand sebelumnya seperti packaging atau photocard sebagai langkah awal.</div>', unsafe_allow_html=True)
+st.write("")
 st.markdown('<div style="text-align: justify;">2. Setiap tahunnya brand dengan duta merek artis Korea terus bertambah, bahkan sejak Januari 2022 hingga Juni 2022 sudah 13 kali artis Korea menjadi duta merek brand lokal. Alangkah baiknya jika perusahaan menyiapkan inovasi baru sebagai plan cadangan jika strategi lama kurang efektif meningkatkan brand awareness.</div>', unsafe_allow_html=True)
+st.write("")
 st.markdown('<div style="text-align: justify;">3. Menggunakan brand ambassador yang berprofesi sebagai idol untuk meminimalisir kerugian. Berdasarkan hasil analisis data, artis dengan profesi idol paling banyak digunakan oleh brand-brand sebelumnya sebagai duta merek. Meskipun paling banyak digunakan, artis dengan profesi idol juga terbukti meningkatkan brand awareness dari brand yang dibintanginya dibanding artis dengan profesi lain.</div>', unsafe_allow_html=True)
 
 #notes
 st.subheader("Catatan")
 st.markdown('<div style="text-align: justify;">1. Penulis sudah berusaha seteliti dan semaksimal mungkin dalam pengerjaan analisis ini. Akan tetapi, penulis membuat dataset sendiri berdasarkan data dari berita dan google trends sehingga memungkinkan adanya kesalahan pada data maupun hasil analisis data.</div>', unsafe_allow_html=True)
+st.write("")
 st.markdown('<div style="text-align: justify;">2. Masih banyak variabel lain seperti tingkat kepopuleran artis di Indonesia, frekuensi kemunculan iklan baik di media sosial dan di televisi, serta rentang waktu grafik google trend yang dapat mempengaruhi hasil korelasi antar variabel dan hasil analisis data.</div>', unsafe_allow_html=True)
