@@ -405,9 +405,9 @@ st.markdown("---")
 #conclusion
 st.subheader("Kesimpulan")
 st.markdown('<div style="text-align: justify;">Hasil analisis di atas dapat menjadi pertimbangan untuk perusahaan yang ingin menggunakan artis korea sebagai brand ambassadornya. Hal penting yang perlu diperhatikan antara lain:</div>', unsafe_allow_html=True)
-st.markdown('<div style="text-align: justify;">1. Menerapkan strategi marketing yang sekiranya berhasil untuk brand-brand sebelumnya sebagai langkah awal.</div>', unsafe_allow_html=True)
+st.markdown('<div style="text-align: justify;">1. Menerapkan strategi marketing yang sekiranya berhasil dilakukan oleh brand-brand sebelumnya seperti packaging atau photocard sebagai langkah awal.</div>', unsafe_allow_html=True)
 st.markdown('<div style="text-align: justify;">2. Setiap tahunnya brand dengan duta merek artis korea terus bertambah, alangkah baiknya jika perusahaan menyiapkan inovasi baru sebagai plan cadangan jika strategi lama kurang efektif meningkatkan brand awareness.</div>', unsafe_allow_html=True)
-st.markdown('<div style="text-align: justify;">3. Menggunakan artis dengan profesi idol untuk meminimalisir kerugian. Berdasarkan hasil analisis data, artis dengan profesi idol paling banyak digunakan oleh brand-brand sebelumnya sebagai duta merek. Meskipun paling banyak digunakan, artis dengan profesi idol juga terbukti meningkatkan brand awareness dari brand yang dibintanginya dibanding artis dengan profesi lain.</div>', unsafe_allow_html=True)
+st.markdown('<div style="text-align: justify;">3. Menggunakan brand ambassador yang berprofesi sebagai idol untuk meminimalisir kerugian. Berdasarkan hasil analisis data, artis dengan profesi idol paling banyak digunakan oleh brand-brand sebelumnya sebagai duta merek. Meskipun paling banyak digunakan, artis dengan profesi idol juga terbukti meningkatkan brand awareness dari brand yang dibintanginya dibanding artis dengan profesi lain.</div>', unsafe_allow_html=True)
 
 #notes
 st.subheader("Catatan")
