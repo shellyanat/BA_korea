@@ -148,7 +148,7 @@ fwk1, fwk2 = st.columns(2)
 with fwk1:
     st.metric("Jumlah Brand Menggunakan Brand Ambassador Artis Korea", df2['brand_artis'].nunique())
 with fwk2:
-    st.write("Setidaknya sudah 30 kali artis korea menjadi brand ambassador berbagai  macam bisnis di Indonesia, mulai dari e-commerce hingga sprei.")
+    st.write("Setidaknya sudah 30 kali artis Korea menjadi brand ambassador berbagai  macam bisnis di Indonesia, mulai dari e-commerce hingga sprei.")
 st.write("")
 met2,met3,met4 = st.columns([5,2.5,2.5])
 with met2:
@@ -180,7 +180,7 @@ with st.container():
     with chart2:
         st.dataframe(df_brand.head())
     with chart3:
-        st.markdown('<div style="text-align: justify;">Fenomena ini dipimpin oleh Tokopedia yang telah 3 kali menggunakan artis korea sebagai  bintang iklannya baik di TV maupun Youtube, diikuti oleh Shopee yang lebih sering mengundang artis korea untuk mengisi acaranya dibanding menjadikan artis sebagai brand ambassador resmi.</div>', unsafe_allow_html=True)
+        st.markdown('<div style="text-align: justify;">Fenomena ini dipimpin oleh Tokopedia yang telah 3 kali menggunakan artis Korea sebagai  bintang iklannya baik di TV maupun Youtube, diikuti oleh Shopee yang lebih sering mengundang artis Korea untuk mengisi acaranya dibanding menjadikan artis sebagai brand ambassador resmi.</div>', unsafe_allow_html=True)
 
 #date
 
@@ -216,7 +216,7 @@ ax_lc.set_title('Brand Ambassador Yearly Count', fontsize=19)
 #show
 ba1,ba2,ba3= st.columns([3,3,3])
 with ba1:
-    st.markdown('<div style="text-align: justify;">Grafik disamping menunjukkan bahwa setiap tahunnya fenomena artis korea sebagai duta merek brand Indonesia terus meningkat. Puncaknya pada bulan April 2022, ada 5 brand yang mengumumkan bintang baru sebagai duta merek mereka yaitu Bukalapak, Azarine Cosmetic, Mister Potato, Kintakun Sprei dan Avoskin.</div>', unsafe_allow_html=True)
+    st.markdown('<div style="text-align: justify;">Grafik disamping menunjukkan bahwa setiap tahunnya fenomena artis Korea sebagai duta merek brand Indonesia terus meningkat. Puncaknya pada bulan April 2022, ada 5 brand yang mengumumkan bintang baru sebagai duta merek mereka yaitu Bukalapak, Azarine Cosmetic, Mister Potato, Kintakun Sprei dan Avoskin.</div>', unsafe_allow_html=True)
 with ba2:
     st.pyplot(fig_lc)
 with ba3:
@@ -310,7 +310,7 @@ df_gs = df_gs.sort_values(['growth'],ascending=False).reset_index(drop=True)
 
 #show growth
 st.subheader("Melihat Nilai Growth Google Trends dari Bisnis dengan Brand Ambassador Artis Korea")
-st.write("Nilai growth berikut menunjukkan berapa kali lipat besarnya nilai ketenaran suatu merek pada hari diumumkannya artis korea sebagai brand ambassador dibandingkan dengan 30 hari sebelum pengumuman.")
+st.write("Nilai growth berikut menunjukkan berapa kali lipat besarnya nilai ketenaran suatu merek pada hari diumumkannya artis Korea sebagai brand ambassador dibandingkan dengan 30 hari sebelum pengumuman.")
 growth1, growth2, growth3,growth4 = st.columns([2.3,4,2.3,1.4])
 with growth1:
     st.write(df_gs.head())
@@ -404,9 +404,9 @@ st.markdown("---")
 
 #conclusion
 st.subheader("Kesimpulan")
-st.markdown('<div style="text-align: justify;">Hasil analisis di atas dapat menjadi pertimbangan untuk perusahaan yang ingin menggunakan artis korea sebagai brand ambassadornya. Hal penting yang perlu diperhatikan antara lain:</div>', unsafe_allow_html=True)
+st.markdown('<div style="text-align: justify;">Hasil dari analisis data dapat menjadi pertimbangan untuk perusahaan yang ingin menggunakan artis korea sebagai brand ambassadornya. Hal yang perlu dilakukan antara lain:</div>', unsafe_allow_html=True)
 st.markdown('<div style="text-align: justify;">1. Menerapkan strategi marketing yang sekiranya berhasil dilakukan oleh brand-brand sebelumnya seperti packaging atau photocard sebagai langkah awal.</div>', unsafe_allow_html=True)
-st.markdown('<div style="text-align: justify;">2. Setiap tahunnya brand dengan duta merek artis korea terus bertambah, alangkah baiknya jika perusahaan menyiapkan inovasi baru sebagai plan cadangan jika strategi lama kurang efektif meningkatkan brand awareness.</div>', unsafe_allow_html=True)
+st.markdown('<div style="text-align: justify;">2. Setiap tahunnya brand dengan duta merek artis Korea terus bertambah, bahkan sejak Januari 2022 hingga Juni 2022 sudah 13 kali artis Korea menjadi duta merek brand lokal. Alangkah baiknya jika perusahaan menyiapkan inovasi baru sebagai plan cadangan jika strategi lama kurang efektif meningkatkan brand awareness.</div>', unsafe_allow_html=True)
 st.markdown('<div style="text-align: justify;">3. Menggunakan brand ambassador yang berprofesi sebagai idol untuk meminimalisir kerugian. Berdasarkan hasil analisis data, artis dengan profesi idol paling banyak digunakan oleh brand-brand sebelumnya sebagai duta merek. Meskipun paling banyak digunakan, artis dengan profesi idol juga terbukti meningkatkan brand awareness dari brand yang dibintanginya dibanding artis dengan profesi lain.</div>', unsafe_allow_html=True)
 
 #notes
