@@ -11,7 +11,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 
 #page setting
-st.set_page_config(layout="wide")
+st.set_page_config(page_title='Artis Korea sebagai Duta Merek Brand Lokal',layout="wide")
 
 st.markdown('''
 <style>
