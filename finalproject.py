@@ -318,14 +318,13 @@ with growth2:
     st.markdown('<div style="text-align: justify;">Tabel di sebelah kiri menunjukkan 5 pertumbuhan tertinggi. Nilai growth 100 menunjukkan bahwa nilai trend brand tersebut pada h-30 hari pengumuman adalah 0 dan meningkat menjadi 100 di hari-h pengumuman. Tabel di sebelah kanan menunjukkan 5 brand dengan nilai growth terendah, tabel selengkapnya dapat dilihat di bawah ini.</div>', unsafe_allow_html=True)
     st.write("")
     st.write("")
-    with st.expander("Tabel Nilai Growth Google Trends"):
-        st.write(df_gs)
 with growth3:
     st.write(df_gs.tail())
 with growth4:
     with st.expander("Informasi ruangguru_treasure"):
         st.markdown('<div style="text-align: justify;">Alasan mengapa nilai trend Ruangguru rendah di hari Treasure resmi menjadi brand ambassador mereka adalah karena penggemar Treasure telah menduga hal ini akan terjadi berkat teaser yang diberikan Ruangguru beberapa hari sebelumnya. Selain itu, trend Ruangguru meningkat menjadi 100 pada tanggal 7 September atau 4 hari setelah pengumuman, akibat dari diadakannya fanmeeting yang disiarkan beberapa stasiun TV Indonesia. Oleh karena itu, kurang tepat jika dikatakan Ruangguru tidak mengalami peningkatan popularitas selama menggandeng Treasure. Nilai growth khusus Ruangguru section berikutnya akan mengacu pada nilai trend pada hari fanmeeting Treasure x Ruangguru, yaitu 100.</div>', unsafe_allow_html=True)
-
+with st.expander("Lihat Tabel Nilai Growth Google Trends"):
+    st.write(df_gs)
 #growth ends
 
 
@@ -392,7 +391,7 @@ st.plotly_chart(fig, use_container_width=True)
 #show corr
 #plotly.offline.plot(fig)
 
-with st.expander("Interpretasi Nilai Korelasi:"):
+with st.expander("Lihat Interpretasi Nilai Korelasi:"):
     st.write("Beberapa insight yang didapatkan dari hasil heatmap korelasi antar variabel adalah:")
     st.markdown('<div style="text-align: justify;">1. Dua variabel yang memiliki nilai korelasi paling tinggi adalah bundle dan kategori_Beauty. Hal ini menunjukkan bahwa untuk hampir seluruh brand kecantikan dapat dipastikan akan menyediakan bundle produk hasil kolaborasi dengan brand ambassador-nya. Begitupun brand yang menyediakan bundle produk, dapat dipastikan brand tersebut berfokus pada industri kecantikan.</div>', unsafe_allow_html=True)
     st.markdown('<div style="text-align: justify;">2. Faktor tertinggi yang mempengaruhi nilai growth suatu brand adalah kategori_F&B. Dengan nilai korelasi lebih dari 0.5, dapat dikatakan bahwa sebagian besar brand yang memiliki nilai growth tinggi berasal dari industri food and beverages.</div>', unsafe_allow_html=True)
