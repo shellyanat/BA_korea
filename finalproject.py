@@ -166,7 +166,7 @@ fig_pie1 = go.Figure(data=[go.Pie(labels=df_kategori['kategori'],
                              values=df_kategori['counts'])])
 fig_pie1.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=20,
                   marker=dict(colors=px.colors.qualitative.Set2, line=dict(color='#000000', width=2)))
-fig_pie1.update_layout(title_text='Brand Category')
+fig_pie1.update_layout(title_text='Brand Category',title_x=0.5)
 
 #top 5 brand
 df_brand= df2['brand'].value_counts().rename_axis('brand').reset_index(name='counts')
@@ -193,7 +193,7 @@ df_tglba = df_tglba.drop(df_tglba[df_tglba.counts < 3].index)
 fig_bar = go.Figure(data=[go.Bar(x=df_tglba['yearmonth'], y=df_tglba['counts'], text=df_tglba['counts'])])
 fig_bar.update_traces(marker_color=px.colors.qualitative.Set2, marker_line_color='rgb(0,0,0)',
                   marker_line_width=1.5, opacity=0.6)
-fig_bar.update_layout(title_text='Top Brand Ambassador Announcement Month',xaxis=dict(type = "category"))
+fig_bar.update_layout(title_text='Top Brand Ambassador Announcement Month',xaxis=dict(type = "category"),title_x=0.5)
 
 
 #by year
@@ -205,7 +205,7 @@ df_year = df_year.sort_values(by=['counts'])
 
 fig_lc = go.Figure(
     data=[go.Scatter(y=df_year['counts'], x=df_year['year'] ,line=dict(color='darkturquoise'))],
-    layout=dict(title=dict(text='Brand Ambassador Yearly Count'))
+    layout=dict(title=dict(text='Brand Ambassador Yearly Count',x=0.5))
 )
 
 #show
