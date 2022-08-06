@@ -213,9 +213,9 @@ ba1,ba2,ba3= st.columns([3,3,3])
 with ba1:
     st.markdown('<div style="text-align: justify;">Grafik disamping menunjukkan bahwa setiap tahunnya fenomena artis korea sebagai duta merek brand Indonesia terus meningkat. Puncaknya pada bulan April 2022, ada 5 brand yang mengumumkan bintang baru sebagai duta merek mereka yaitu Bukalapak, Azarine Cosmetic, Mister Potato, Kintakun Sprei dan Avoskin.</div>', unsafe_allow_html=True)
 with ba2:
-    st.plotly_chart(fig_pie1,use_container_width=True)
+    st.plotly_chart(fig_lc,use_container_width=True)
 with ba3:
-    st.plotly_chart(fig_pie1,use_container_width=True)
+    st.plotly_chart(fig_bar,use_container_width=True)
 #body1 end
 
 st.markdown("---")
