@@ -172,8 +172,8 @@ fig_pie1.update_layout(title_text='Brand Category')
 df_brand= df2['brand'].value_counts().rename_axis('brand').reset_index(name='counts')
 with st.container():
     chart1,chart2,chart3 = st.columns([4,2,3])
-    #with chart1:
-        #st.plotly_chart(fig_pie1,use_container_width=True)
+    with chart1:
+        st.plotly_chart(fig_pie1,use_container_width=True)
     with chart2:
         st.dataframe(df_brand.head())
     with chart3:
