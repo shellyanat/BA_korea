@@ -161,44 +161,39 @@ with met4:
 #visualization information
 
 #percentage of brand category
-df_kategori = df['kategori'].value_counts().rename_axis('kategori').reset_index(name='counts')
-cmap = plt.get_cmap('pink')
-colors = list(cmap(np.linspace(0.45, 0.85, len(df_kategori))))
-fig_pie1, ax1 = plt.subplots(figsize=(3,2))
-ax1.pie(df_kategori['counts'], labels=df_kategori['kategori'],autopct='%.1f%%', startangle=90,colors=colors)
-ax1.set_title('Brand Category',fontsize=10)
-ax1.axis('equal')
+df_kategori = df2['kategori'].value_counts().rename_axis('kategori').reset_index(name='counts')
+fig_pie1 = go.Figure(data=[go.Pie(labels=df_kategori['kategori'],
+                             values=df_kategori['counts'])])
+fig_pie1.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=20,
+                  marker=dict(colors=px.colors.qualitative.Set2, line=dict(color='#000000', width=2)))
+fig_pie1.update_layout(title_text='Brand Category')
 
 #top 5 brand
 df_brand= df2['brand'].value_counts().rename_axis('brand').reset_index(name='counts')
-
-
 with st.container():
     chart1,chart2,chart3 = st.columns([4,2,3])
-    with chart1:
-        st.pyplot(fig_pie1)
+    #with chart1:
+        #st.plotly_chart(fig_pie1,use_container_width=True)
     with chart2:
         st.dataframe(df_brand.head())
     with chart3:
-        st.markdown('<div style="text-align: justify;">Fenomena ini dipimpin oleh Tokopedia yang telah 3 kali menggunakan artis Korea sebagai  bintang iklannya baik di TV maupun Youtube, diikuti oleh Shopee yang lebih sering mengundang artis Korea untuk mengisi acaranya dibanding menjadikan artis sebagai brand ambassador resmi.</div>', unsafe_allow_html=True)
+        st.markdown('<div style="text-align: justify;">Fenomena ini dipimpin oleh Tokopedia yang telah 3 kali menggunakan artis korea sebagai  bintang iklannya baik di TV maupun Youtube, diikuti oleh Shopee yang lebih sering mengundang artis korea untuk mengisi acaranya dibanding menjadikan artis sebagai brand ambassador resmi.</div>', unsafe_allow_html=True)
 
 #date
 
 #distribution of BA's announcement date
 #by month
 df3 = df2.copy()
-list_YM = df3['tgl_ba'].dt.to_period('M')
+list_YM = df3['tgl_ba'].dt.strftime('%Y-%m')
 df3['YM'] = list_YM
 df3['YM'].value_counts()
-df_tglba = df3['YM'].value_counts().rename_axis('year-month').reset_index(name='counts')
-cmap = plt.get_cmap('winter')
-colors = list(cmap(np.linspace(0.45, 0.85, len(df_tglba))))
-fig_bar, ax3 = plt.subplots(figsize=(4, 3))
-ax3=sns.barplot(x='year-month', y='counts',
-               data=df_tglba[df_tglba['counts']>1], palette=colors)
-ax3.set_title('Top Brand Ambassador Monthly Count', fontsize=18)
-ax3.set_xticklabels(df_tglba[df_tglba['counts']>1]['year-month'],rotation=45)
-ax3.axis('equal')
+df_tglba = df3['YM'].value_counts().rename_axis('yearmonth').reset_index(name='counts')
+df_tglba = df_tglba.drop(df_tglba[df_tglba.counts < 3].index)
+
+fig_bar = go.Figure(data=[go.Bar(x=df_tglba['yearmonth'], y=df_tglba['counts'], text=df_tglba['counts'])])
+fig_bar.update_traces(marker_color=px.colors.qualitative.Set2, marker_line_color='rgb(0,0,0)',
+                  marker_line_width=1.5, opacity=0.6)
+fig_bar.update_layout(title_text='Top Brand Ambassador Announcement Month',xaxis=dict(type = "category"))
 
 
 #by year
@@ -207,20 +202,20 @@ list_Y = df4['tgl_ba'].dt.strftime('%Y')
 df4['Y'] = list_Y
 df_year = df4['Y'].value_counts().rename_axis('year').reset_index(name='counts')
 df_year = df_year.sort_values(by=['counts'])
-cmap = plt.get_cmap('winter')
-colors = list(cmap(np.linspace(0.45, 0.85, len(df_year))))
-fig_lc, ax_lc = plt.subplots(figsize=(4, 3))
-ax_lc=sns.lineplot(x='year', y='counts', data=df_year)
-ax_lc.set_title('Brand Ambassador Yearly Count', fontsize=19)
+
+fig_lc = go.Figure(
+    data=[go.Scatter(y=df_year['counts'], x=df_year['year'] ,line=dict(color='darkturquoise'))],
+    layout=dict(title=dict(text='Brand Ambassador Yearly Count'))
+)
 
 #show
 ba1,ba2,ba3= st.columns([3,3,3])
 with ba1:
-    st.markdown('<div style="text-align: justify;">Grafik disamping menunjukkan bahwa setiap tahunnya fenomena artis Korea sebagai duta merek brand Indonesia terus meningkat. Puncaknya pada bulan April 2022, ada 5 brand yang mengumumkan bintang baru sebagai duta merek mereka yaitu Bukalapak, Azarine Cosmetic, Mister Potato, Kintakun Sprei dan Avoskin.</div>', unsafe_allow_html=True)
+    st.markdown('<div style="text-align: justify;">Grafik disamping menunjukkan bahwa setiap tahunnya fenomena artis korea sebagai duta merek brand Indonesia terus meningkat. Puncaknya pada bulan April 2022, ada 5 brand yang mengumumkan bintang baru sebagai duta merek mereka yaitu Bukalapak, Azarine Cosmetic, Mister Potato, Kintakun Sprei dan Avoskin.</div>', unsafe_allow_html=True)
 with ba2:
-    st.pyplot(fig_lc)
+    st.plotly_chart(fig_pie1,use_container_width=True)
 with ba3:
-    st.pyplot(fig_bar)
+    st.plotly_chart(fig_pie1,use_container_width=True)
 #body1 end
 
 st.markdown("---")
