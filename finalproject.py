@@ -232,6 +232,8 @@ fig_lc = go.Figure(
 )
 
 #show
+with st.container():
+    st.markdown("---")
 ba1,ba2,ba3= st.columns([3,3,3])
 with ba1:
     st.write("")
@@ -340,13 +342,13 @@ st.subheader("Melihat Nilai Growth Google Trends dari Bisnis dengan Brand Ambass
 st.write("Nilai growth berikut menunjukkan berapa kali lipat besarnya nilai ketenaran suatu merek pada hari diumumkannya artis Korea sebagai brand ambassador dibandingkan dengan 30 hari sebelum pengumuman.")
 g0,growth1, growth2, growth3 = st.columns([1,3,4,3])
 with growth1:
-    st.write(df_gs.head())
+    st.dataframe(df_gs.head())
 with growth2:
     st.write("")
     st.write("")
     st.markdown('<div style="text-align: justify;">Tabel di sebelah kiri menunjukkan 5 pertumbuhan tertinggi. Nilai growth 100 menunjukkan bahwa nilai trend brand tersebut pada h-30 hari pengumuman adalah 0 dan meningkat menjadi 100 di hari-h pengumuman. Tabel di sebelah kanan menunjukkan 5 brand dengan nilai growth terendah, tabel selengkapnya dapat dilihat di bawah ini.</div>', unsafe_allow_html=True)
 with growth3:
-    st.write(df_gs.tail())
+    st.dataframe(df_gs.tail())
 with st.expander("Lihat Tabel Nilai Growth Google Trends"):
     st.write(df_gs)
 with st.expander("Informasi ruangguru_treasure"):
