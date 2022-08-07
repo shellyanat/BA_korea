@@ -178,6 +178,7 @@ fig_pie1.update_layout(title_text='Brand Category',title_x=0.5)
 #top 5 brand
 df_brand= df2['brand'].value_counts().rename_axis('brand').reset_index(name='counts')
 with st.container():
+    st.markdown("---")
     chart1,chart2,chart3 = st.columns([4,2,3])
     with chart1:
         st.plotly_chart(fig_pie1,use_container_width=True)
@@ -192,6 +193,8 @@ with st.container():
         st.write("")
         st.dataframe(df_brand.head())
     with chart3:
+        st.write("")
+        st.write("")
         st.write("")
         st.write("")
         st.write("")
@@ -340,7 +343,7 @@ df_gs = df_gs.sort_values(['growth'],ascending=False).reset_index(drop=True)
 #show growth
 st.subheader("Melihat Nilai Growth Google Trends dari Bisnis dengan Brand Ambassador Artis Korea")
 st.write("Nilai growth berikut menunjukkan berapa kali lipat besarnya nilai ketenaran suatu merek pada hari diumumkannya artis Korea sebagai brand ambassador dibandingkan dengan 30 hari sebelum pengumuman.")
-g0,growth1, growth2, growth3 = st.columns([1,3,4,3])
+g0,growth1, growth2, growth3,g00 = st.columns([1,3,4,3,1])
 with growth1:
     st.dataframe(df_gs.head())
 with growth2:
