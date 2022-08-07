@@ -346,7 +346,7 @@ df_gs = df_gs.sort_values(['growth'],ascending=False).reset_index(drop=True)
 #show growth
 st.subheader("Melihat Nilai Growth Google Trends dari Bisnis dengan Brand Ambassador Artis Korea")
 st.write("Nilai growth berikut menunjukkan berapa kali lipat besarnya nilai ketenaran suatu merek pada hari diumumkannya artis Korea sebagai brand ambassador dibandingkan dengan 30 hari sebelum pengumuman.")
-g0,growth1, growth2, g00, growth3= st.columns([1,3,4,0.3,3])
+g0,growth1, growth2, g00, growth3= st.columns([1,3,4,0.5,3])
 with growth1:
     st.dataframe(df_gs.head())
 with growth2:
