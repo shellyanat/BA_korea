@@ -97,6 +97,7 @@ st.subheader("HALLYU WAVE")
 with st.expander("Sedikit Kilas Balik Hallyu Wave di Indonesia"):
     hw1,hw2= st.columns([5,3])
     with hw1:
+        st.write("")
         st.markdown('<div style="text-align: justify;">Hallyu Wave atau Demam Korea diawali dengan meledaknya kepopuleran drama korea yang ditayangkan di stasiun TV Indonesia seperti “Full House” dan “Boys Before Flowers”. Penyanyi Rain, yang juga salah satu aktor pada drama “Full House” menjadi penyanyi K-pop pertama yang berhasil menggelar konser di Indonesia pada 2005. Sejak 2011 hingga 2022 ini, berbagai artis Korea rutin berkunjung ke Indonesia untuk konser ataupun sekadar fanmeeting, walaupun sempat terhenti saat pandemi Covid-19 pada 2020-2021. Tak hanya itu, dilansir dari website resmi Twitter, Indonesia menjadi negara yang paling banyak membuat tweet mengenai  K-pop sekaligus menempati posisi pertama dengan jumlah fans K-pop terbesar pada 2021 lalu.</div>', unsafe_allow_html=True)
     with hw2:
         tw1 = Image.open('twitter1.jpg')
@@ -113,6 +114,9 @@ with st.expander("Sedikit Kilas Balik Hallyu Wave di Indonesia"):
     with pop1:
         st.pyplot(fig_pop)
     with pop2:
+        st.write("")
+        st.write("")
+        st.write("")
         st.markdown('<div style="text-align: justify;">Berdasarkan survei yang dilakukan oleh Lembaga Pertukaran Budaya Internasional Korea pada 2018, sebanyak 59% responden menyatakan bahwa K-pop sangatlah popular di Indonesia dan didukung dengan pernyataan 29.8% responden lain yang setuju bahwa K-pop cukup popular. Tak hanya itu, dilansir dari website resmi Twitter, Indonesia menjadi negara yang paling banyak membuat tweet mengenai  K-pop sekaligus menempati posisi pertama dengan jumlah fans K-pop terbesar pada 2021 lalu.</div>', unsafe_allow_html=True)
 #intro end
 
@@ -148,10 +152,13 @@ fwk1, fwk2 = st.columns(2)
 with fwk1:
     st.metric("Jumlah Brand Menggunakan Brand Ambassador Artis Korea", df2['brand_artis'].nunique())
 with fwk2:
+    st.write("")
+    st.write("")
     st.write("Setidaknya sudah 30 kali artis Korea menjadi brand ambassador berbagai  macam bisnis di Indonesia, mulai dari e-commerce hingga sprei.")
 st.write("")
 met2,met3,met4 = st.columns([5,2.5,2.5])
 with met2:
+    st.write("")
     st.write("Pada periode November 2018 hingga Juni 2022 ini, ada 22 artis yang telah menandatangani kontrak sebagai duta merek untuk 24 brand.")
 with met3:
     st.metric("Total Brand", df2['brand'].nunique())
@@ -175,8 +182,18 @@ with st.container():
     with chart1:
         st.plotly_chart(fig_pie1,use_container_width=True)
     with chart2:
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
         st.dataframe(df_brand.head())
     with chart3:
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
         st.markdown('<div style="text-align: justify;">Fenomena ini dipimpin oleh Tokopedia yang telah 3 kali menggunakan artis korea sebagai  bintang iklannya baik di TV maupun Youtube, diikuti oleh Shopee yang lebih sering mengundang artis korea untuk mengisi acaranya dibanding menjadikan artis sebagai brand ambassador resmi.</div>', unsafe_allow_html=True)
 
 #date
@@ -211,6 +228,11 @@ fig_lc = go.Figure(
 #show
 ba1,ba2,ba3= st.columns([3,3,3])
 with ba1:
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
     st.markdown('<div style="text-align: justify;">Grafik disamping menunjukkan bahwa setiap tahunnya fenomena artis korea sebagai duta merek brand Indonesia terus meningkat. Puncaknya pada bulan April 2022, ada 5 brand yang mengumumkan bintang baru sebagai duta merek mereka yaitu Bukalapak, Azarine Cosmetic, Mister Potato, Kintakun Sprei dan Avoskin.</div>', unsafe_allow_html=True)
 with ba2:
     st.plotly_chart(fig_lc,use_container_width=True)
@@ -306,10 +328,12 @@ df_gs = df_gs.sort_values(['growth'],ascending=False).reset_index(drop=True)
 #show growth
 st.subheader("Melihat Nilai Growth Google Trends dari Bisnis dengan Brand Ambassador Artis Korea")
 st.write("Nilai growth berikut menunjukkan berapa kali lipat besarnya nilai ketenaran suatu merek pada hari diumumkannya artis Korea sebagai brand ambassador dibandingkan dengan 30 hari sebelum pengumuman.")
-growth1, growth2, growth3 = st.columns([3,4,3])
+g0,growth1, growth2, growth3 = st.columns([1,3,3,3])
 with growth1:
     st.write(df_gs.head())
 with growth2:
+    st.write("")
+    st.write("")
     st.markdown('<div style="text-align: justify;">Tabel di sebelah kiri menunjukkan 5 pertumbuhan tertinggi. Nilai growth 100 menunjukkan bahwa nilai trend brand tersebut pada h-30 hari pengumuman adalah 0 dan meningkat menjadi 100 di hari-h pengumuman. Tabel di sebelah kanan menunjukkan 5 brand dengan nilai growth terendah, tabel selengkapnya dapat dilihat di bawah ini.</div>', unsafe_allow_html=True)
 with growth3:
     st.write(df_gs.tail())
