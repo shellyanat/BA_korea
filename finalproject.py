@@ -187,8 +187,14 @@ with st.container():
         st.write("")
         st.write("")
         st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
         st.dataframe(df_brand.head())
     with chart3:
+        st.write("")
+        st.write("")
+        st.write("")
         st.write("")
         st.write("")
         st.write("")
@@ -228,6 +234,10 @@ fig_lc = go.Figure(
 #show
 ba1,ba2,ba3= st.columns([3,3,3])
 with ba1:
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
     st.write("")
     st.write("")
     st.write("")
@@ -328,7 +338,7 @@ df_gs = df_gs.sort_values(['growth'],ascending=False).reset_index(drop=True)
 #show growth
 st.subheader("Melihat Nilai Growth Google Trends dari Bisnis dengan Brand Ambassador Artis Korea")
 st.write("Nilai growth berikut menunjukkan berapa kali lipat besarnya nilai ketenaran suatu merek pada hari diumumkannya artis Korea sebagai brand ambassador dibandingkan dengan 30 hari sebelum pengumuman.")
-g0,growth1, growth2, growth3 = st.columns([1,3,3,3])
+g0,growth1, growth2, growth3 = st.columns([1,3,4,3])
 with growth1:
     st.write(df_gs.head())
 with growth2:
