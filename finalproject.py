@@ -146,24 +146,28 @@ with a2:
         file_name='ba_artis_korea.csv',
         mime='text/csv',
     )
-
+#tab
+tab1,tab2,tab3 = st.tabs(["Jumlah Brand-Artis","Persentase Brand","Grafik Tahun"])
+    
+    
 #metrics information
-fwk1, fwk2 = st.columns(2)
-with fwk1:
-    st.metric("Jumlah Brand Menggunakan Brand Ambassador Artis Korea", df2['brand_artis'].nunique())
-with fwk2:
+with tab1:
+    fwk1, fwk2 = st.columns(2)
+    with fwk1:
+       st.metric("Jumlah Brand Menggunakan Brand Ambassador Artis Korea", df2['brand_artis'].nunique())
+    with fwk2:
+        st.write("")
+        st.write("")
+        st.write("Setidaknya sudah 30 kali artis Korea menjadi brand ambassador berbagai  macam bisnis di Indonesia, mulai dari e-commerce hingga sprei.")
     st.write("")
-    st.write("")
-    st.write("Setidaknya sudah 30 kali artis Korea menjadi brand ambassador berbagai  macam bisnis di Indonesia, mulai dari e-commerce hingga sprei.")
-st.write("")
-met2,met3,met4 = st.columns([5,2.5,2.5])
-with met2:
-    st.write("")
-    st.write("Pada periode November 2018 hingga Juni 2022 ini, ada 22 artis yang telah menandatangani kontrak sebagai duta merek untuk 24 brand.")
-with met3:
-    st.metric("Total Brand", df2['brand'].nunique())
-with met4:
-    st.metric("Total Artis", df2['artis'].nunique())
+    met2,met3,met4 = st.columns([5,2.5,2.5])
+    with met2:
+        st.write("")
+        st.write("Pada periode November 2018 hingga Juni 2022 ini, ada 22 artis yang telah menandatangani kontrak sebagai duta merek untuk 24 brand.")
+    with met3:
+        st.metric("Total Brand", df2['brand'].nunique())
+    with met4:
+        st.metric("Total Artis", df2['artis'].nunique())
 
 #visualization information
 
@@ -177,33 +181,33 @@ fig_pie1.update_layout(title_text='Brand Category',title_x=0.5)
 
 #top 5 brand
 df_brand= df2['brand'].value_counts().rename_axis('brand').reset_index(name='counts')
-with st.container():
-    st.markdown("---")
-    chart1,chart2,chart3 = st.columns([4,2,3])
-    with chart1:
-        st.plotly_chart(fig_pie1,use_container_width=True)
-    with chart2:
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.dataframe(df_brand.head())
-    with chart3:
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.write("")
-        st.markdown('<div style="text-align: justify;">Fenomena ini dipimpin oleh Tokopedia yang telah 3 kali menggunakan artis korea sebagai  bintang iklannya baik di TV maupun Youtube, diikuti oleh Shopee yang lebih sering mengundang artis korea untuk mengisi acaranya dibanding menjadikan artis sebagai brand ambassador resmi.</div>', unsafe_allow_html=True)
+with tab2:
+    with st.container():
+        chart1,chart2,chart3 = st.columns([4,2,3])
+        with chart1:
+            st.plotly_chart(fig_pie1,use_container_width=True)
+        with chart2:
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.dataframe(df_brand.head())
+        with chart3:
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.markdown('<div style="text-align: justify;">Fenomena ini dipimpin oleh Tokopedia yang telah 3 kali menggunakan artis korea sebagai  bintang iklannya baik di TV maupun Youtube, diikuti oleh Shopee yang lebih sering mengundang artis korea untuk mengisi acaranya dibanding menjadikan artis sebagai brand ambassador resmi.</div>', unsafe_allow_html=True)
 
 #date
 
@@ -235,24 +239,23 @@ fig_lc = go.Figure(
 )
 
 #show
-with st.container():
-    st.markdown("---")
-ba1,ba2,ba3= st.columns([3,3,3])
-with ba1:
-    st.write("")
-    st.write("")
-    st.write("")
-    st.write("")
-    st.write("")
-    st.write("")
-    st.write("")
-    st.write("")
-    st.write("")
-    st.markdown('<div style="text-align: justify;">Grafik disamping menunjukkan bahwa setiap tahunnya fenomena artis korea sebagai duta merek brand Indonesia terus meningkat. Puncaknya pada bulan April 2022, ada 5 brand yang mengumumkan bintang baru sebagai duta merek mereka yaitu Bukalapak, Azarine Cosmetic, Mister Potato, Kintakun Sprei dan Avoskin.</div>', unsafe_allow_html=True)
-with ba2:
-    st.plotly_chart(fig_lc,use_container_width=True)
-with ba3:
-    st.plotly_chart(fig_bar,use_container_width=True)
+with tab3:
+    ba1,ba2,ba3= st.columns([3,3,3])
+    with ba1:
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.markdown('<div style="text-align: justify;">Grafik disamping menunjukkan bahwa setiap tahunnya fenomena artis korea sebagai duta merek brand Indonesia terus meningkat. Puncaknya pada bulan April 2022, ada 5 brand yang mengumumkan bintang baru sebagai duta merek mereka yaitu Bukalapak, Azarine Cosmetic, Mister Potato, Kintakun Sprei dan Avoskin.</div>', unsafe_allow_html=True)
+    with ba2:
+        st.plotly_chart(fig_lc,use_container_width=True)
+    with ba3:
+        st.plotly_chart(fig_bar,use_container_width=True)
 #body1 end
 
 st.markdown("---")
