@@ -216,7 +216,7 @@ fig_pie2 = go.Figure(data=[go.Pie(labels=df_artis['artis'],
                              values=df_artis['counts'])])
 fig_pie2.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=20,
                   marker=dict(colors=px.colors.qualitative.Set2, line=dict(color='#000000', width=2)))
-fig_pie2.update_layout(title_text='Top Artis',,title_x=0.5)
+fig_pie2.update_layout(title_text='Top Artis',title_x=0.5)
 
 
 df_artis= df2['artis'].value_counts().rename_axis('artis').reset_index(name='counts')
