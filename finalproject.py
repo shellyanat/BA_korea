@@ -147,7 +147,7 @@ with a2:
         mime='text/csv',
     )
 #tab
-tab1,tab2,tab3 = st.tabs(["Jumlah Brand-Artis","Persentase Brand","Grafik Tahun"])
+tab1,tab2,tab3,tab4 = st.tabs(["Jumlah Brand-Artis","Persentase Brand","Top Artis","Grafik Tahun"])
     
     
 #metrics information
@@ -209,6 +209,47 @@ with tab2:
             st.write("")
             st.markdown('<div style="text-align: justify;">Fenomena ini dipimpin oleh Tokopedia yang telah 3 kali menggunakan artis korea sebagai  bintang iklannya baik di TV maupun Youtube, diikuti oleh Shopee yang lebih sering mengundang artis korea untuk mengisi acaranya dibanding menjadikan artis sebagai brand ambassador resmi.</div>', unsafe_allow_html=True)
 
+#artis
+df_artis = df2['artis'].value_counts().rename_axis('artis').reset_index(name='counts')
+df_artis = df_artis.drop(df_artis[df_artis.counts < 2].index)
+fig_pie2 = go.Figure(data=[go.Pie(labels=df_artis['artis'],
+                             values=df_artis['counts'])])
+fig_pie2.update_traces(hoverinfo='label+percent', textinfo='value', textfont_size=20,
+                  marker=dict(colors=px.colors.qualitative.Set2, line=dict(color='#000000', width=2)))
+fig_pie2.update_layout(title_text='Top Artis')
+
+
+df_artis= df2['artis'].value_counts().rename_axis('artis').reset_index(name='counts')
+with tab3:
+    with st.container():
+        chart1,chart2,chart3 = st.columns([4,2,3])
+        with chart1:
+            st.plotly_chart(fig_pie2,use_container_width=True)
+        with chart2:
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.dataframe(df_artis.head())
+        with chart3:
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.write("")
+            st.markdown('<div style="text-align: justify;">BTS menjadi artis korea yang paling sering digandeng brand lokal untuk menjadi duta mereknya, diikuti oleh Blackpink dan beberapa artis lain.</div>', unsafe_allow_html=True)
+
+            
+            
 #date
 
 #distribution of BA's announcement date
