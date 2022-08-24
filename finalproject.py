@@ -163,7 +163,7 @@ with tab1:
     met2,met3,met4 = st.columns([5,2.5,2.5])
     with met2:
         st.write("")
-        st.write("Pada periode November 2018 hingga Juni 2022 ini, ada 22 artis yang telah menandatangani kontrak sebagai duta merek untuk 24 brand.")
+        st.write("Pada periode November 2018 hingga Juni 2022 ini, ada 22 artis yang telah menandatangani kontrak sebagai duta merek untuk 24 brand. Artinya ada brand yang lebih dari sekali menggunakan artis korea sebagai duta mereknya, dan ada juga artis yang lebih dari sekali dikontrak sebagai brand ambassador produk lokal.")
     with met3:
         st.metric("Total Brand", df2['brand'].nunique())
     with met4:
