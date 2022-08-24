@@ -397,7 +397,13 @@ with growth2:
 with growth3:
     st.dataframe(df_gs.tail())
 with st.expander("Lihat Tabel Nilai Growth Google Trends"):
-    st.write(df_gs)
+    t1,t2,t3=st.columns([3,3,3])
+    with t1:
+        st.write(df_gs.head(10))
+    with t2:
+        st.write(df_gs.loc[10:19])
+    with t3:
+        st.write(df_gs.tail(10))
 with st.expander("Informasi ruangguru_treasure"):
     st.markdown('<div style="text-align: justify;">Alasan mengapa nilai trend Ruangguru rendah di hari Treasure resmi menjadi brand ambassador mereka adalah karena penggemar Treasure telah menduga hal ini akan terjadi berkat teaser yang diberikan Ruangguru beberapa hari sebelumnya. Selain itu, trend Ruangguru meningkat menjadi 100 pada tanggal 7 September atau 4 hari setelah pengumuman, akibat dari diadakannya fanmeeting yang disiarkan beberapa stasiun TV Indonesia. Oleh karena itu, kurang tepat jika dikatakan Ruangguru tidak mengalami peningkatan popularitas selama menggandeng Treasure. Nilai growth khusus Ruangguru section berikutnya akan mengacu pada nilai trend pada hari fanmeeting Treasure x Ruangguru, yaitu 100.</div>', unsafe_allow_html=True)
 
