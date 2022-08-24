@@ -433,13 +433,11 @@ df_new3 = pd.get_dummies(df_new2)
 df_corr = df_new3.corr()
 df_corr = pd.concat([df_corr],axis=1)
 
-corr1, corr2 = st.columns(2)
-with corr1:
-    st.write("Korelasi nilai growth dengan variabel lain seperti strategi marketing, kategori brand dan kategori artis.")
-    st.markdown('<div style="text-align: justify;">Strategi marketing brand yang telah dilakukan selama November 2018 - Juni 2022 di antaranya memberikan photocard, menggunakan wajah artis untuk packaging produk, menyediakan bundling produk khusus artis tersebut dan mengadakan fanmeeting online ataupun offline.</div>', unsafe_allow_html=True)
-with corr2:
-    with st.expander("Tabel Korelasi Seluruh Variabel"):
-        st.write(df_corr)
+
+st.write("Korelasi nilai growth dengan variabel lain seperti strategi marketing, kategori brand dan kategori artis.")
+st.markdown('<div style="text-align: justify;">Strategi marketing brand yang telah dilakukan selama November 2018 - Juni 2022 di antaranya memberikan photocard, menggunakan wajah artis untuk packaging produk, menyediakan bundling produk khusus artis tersebut dan mengadakan fanmeeting online ataupun offline.</div>', unsafe_allow_html=True)
+with st.expander("Tabel Korelasi Seluruh Variabel"):
+    st.write(df_corr)
 
 
 #variable choice
