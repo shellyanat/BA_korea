@@ -306,6 +306,7 @@ st.markdown("---")
 st.subheader("Menilik Grafik Google Trends dari Bisnis dengan Brand Ambassador Artis Korea")
 with st.container():
     st.write("Grafik yang ditampilkan berikut bersumber dari google trends dengan rentang waktu 30 hari sebelum hingga 30 hari sesudah brand mengumumkan brand ambassadornya.")
+    
 
 #selectbox
 #by kategori
@@ -357,7 +358,9 @@ for b,p in zip(list_BA, pal):
 fig_hist.update_layout(title="Grafik Brand di Google Trend Sebelum dan Sesudah Menggunakan BA Artis Korea")
 
 st.plotly_chart(fig_hist,use_container_width=True)
-
+st.caption('-30: H-30 sebelum pengumuman')
+st.caption('0: Hari H pengumuman')
+st.caption('30: H+30 setelah pengumuman')
 #histogram end
 
 #growth from d-30 to d-day
@@ -383,10 +386,11 @@ df_new.replace(np.nan, 0, inplace=True) #replace NaN value with 0
 df_gs = df_new.copy()
 df_gs = df_gs.drop(df_gs.iloc[:, 1:-1],axis = 1)
 df_gs = df_gs.sort_values(['growth'],ascending=False).reset_index(drop=True)
+df_gs['growth']=pd.Series(["{0:.2f}%".format(val) for val in df_gs['growth']], index = df_gs.index)
 
 #show growth
 st.subheader("Melihat Nilai Growth Google Trends dari Bisnis dengan Brand Ambassador Artis Korea")
-st.write("Nilai growth berikut menunjukkan berapa kali lipat besarnya nilai ketenaran suatu merek pada hari diumumkannya artis Korea sebagai brand ambassador dibandingkan dengan 30 hari sebelum pengumuman.")
+st.write("Nilai growth berikut menunjukkan berapa persen peningkatan nilai ketenaran suatu merek pada hari diumumkannya artis Korea sebagai brand ambassador dibandingkan dengan 30 hari sebelum pengumuman.")
 g0,growth1, growth2, g00, growth3= st.columns([0.5,3,4,0.5,3])
 with growth1:
     st.dataframe(df_gs.head())
