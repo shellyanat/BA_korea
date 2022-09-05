@@ -358,13 +358,14 @@ for b,p in zip(list_BA, pal):
 fig_hist.update_layout(title="Grafik Brand di Google Trend Sebelum dan Sesudah Menggunakan BA Artis Korea")
 
 st.plotly_chart(fig_hist,use_container_width=True)
-c1,c2,c3=st.columns([3,3,3])
-with c1:
-    st.caption('-30: H-30 sebelum pengumuman')
-with c2:
-    st.caption('0: Hari H pengumuman')
-with c3:
-    st.caption('30: H+30 setelah pengumuman')
+with st.container():
+    c1,c2,c3=st.columns([3,3,3])
+    with c1:
+        st.caption('-30: H-30 sebelum pengumuman')
+    with c2:
+        st.caption('0: Hari H pengumuman')
+    with c3:
+        st.caption('30: H+30 setelah pengumuman')
 #histogram end
 
 #growth from d-30 to d-day
@@ -397,13 +398,13 @@ st.subheader("Melihat Nilai Growth Google Trends dari Bisnis dengan Brand Ambass
 st.write("Nilai growth berikut menunjukkan berapa persen peningkatan nilai ketenaran suatu merek pada hari diumumkannya artis Korea sebagai brand ambassador dibandingkan dengan 30 hari sebelum pengumuman.")
 g0,growth1, growth2, g00, growth3= st.columns([0.5,3,4,0.5,3])
 with growth1:
-    st.dataframe(df_gs.head())
+    st.dataframe(df_gs.head().style.set_properties(**{'color': 'green'}))
 with growth2:
     st.write("")
     st.write("")
     st.markdown('<div style="text-align: justify;">Tabel di sebelah kiri menunjukkan 5 pertumbuhan tertinggi. Nilai growth 100 menunjukkan bahwa nilai trend brand tersebut pada h-30 hari pengumuman adalah 0 dan meningkat menjadi 100 di hari-h pengumuman. Tabel di sebelah kanan menunjukkan 5 brand dengan nilai growth terendah, tabel selengkapnya dapat dilihat di bawah ini.</div>', unsafe_allow_html=True)
 with growth3:
-    st.dataframe(df_gs.tail())
+    st.dataframe(df_gs.tail().style.set_properties(**{'color': 'red'}))
 with st.expander("Lihat Tabel Nilai Growth Google Trends"):
     t1,t2,t3=st.columns([3,3,3])
     with t1:
