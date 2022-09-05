@@ -358,9 +358,13 @@ for b,p in zip(list_BA, pal):
 fig_hist.update_layout(title="Grafik Brand di Google Trend Sebelum dan Sesudah Menggunakan BA Artis Korea")
 
 st.plotly_chart(fig_hist,use_container_width=True)
-st.caption('-30: H-30 sebelum pengumuman')
-st.caption('0: Hari H pengumuman')
-st.caption('30: H+30 setelah pengumuman')
+c1,c2,c3=st.columns([3,3,3])
+with c1:
+    st.caption('-30: H-30 sebelum pengumuman')
+with c2:
+    st.caption('0: Hari H pengumuman')
+with c3:
+    st.caption('30: H+30 setelah pengumuman')
 #histogram end
 
 #growth from d-30 to d-day
